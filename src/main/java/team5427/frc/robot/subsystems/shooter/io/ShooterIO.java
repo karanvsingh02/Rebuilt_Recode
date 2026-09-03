@@ -24,6 +24,7 @@ public interface ShooterIO {
         public AngularVelocity leftFlywheelMotorAngularVelocity = RotationsPerSecond.of(0.0);
         public LinearVelocity leftFlywheelMotorLinearVelocity = MetersPerSecond.of(0.0);
         public AngularAcceleration leftFlywheelMotorAngularAcceleration = RotationsPerSecondPerSecond.of(0.0);
+        public AngularAcceleration rightFlywheelMotorAngularAcceleration = RotationsPerSecondPerSecond.of(0.0);
         public double leftHoodMotorPosition = 0.0;
         public double leftHoodMotorAngularVelocityRadians = 0.0;
         public Voltage leftFlywheelLeaderMotorVoltage = Volts.of(0);
