@@ -8,6 +8,7 @@ import static edu.wpi.first.units.Units.Volt;
 import static edu.wpi.first.units.Units.Volts;
 
 import org.checkerframework.checker.units.qual.Angle;
+import org.littletonrobotics.junction.AutoLog;
 
 import com.fasterxml.jackson.databind.ser.std.StdKeySerializers.Default;
 
@@ -20,11 +21,17 @@ import edu.wpi.first.units.measure.Voltage;
 
 public interface ShooterIO {
     
+    @AutoLog
     public static class ShooterIOInputs {
+        public double leftHoodMotorPositionRadians = 0.0;
+        public double leftHoodMotorAngularVelocityRadiansPerSecond = 0.0;
+        public double rightHoodMotorPositionRadians = 0.0;
+        public double rightHoodMotorAngularVelocityRadiansPerSecond = 0.0;
+
         public AngularVelocity leftFlywheelMotorAngularVelocity = RotationsPerSecond.of(0.0);
         public LinearVelocity leftFlywheelMotorLinearVelocity = MetersPerSecond.of(0.0);
-        public AngularAcceleration leftFlywheelMotorAngularAcceleration = RotationsPerSecondPerSecond.of(0.0);
-        public AngularAcceleration rightFlywheelMotorAngularAcceleration = RotationsPerSecondPerSecond.of(0.0);
+        public AngularAcceleration leftFlywheelAngularAcceleration = RotationsPerSecondPerSecond.of(0.0);
+        public AngularAcceleration rightFlywheelAngularAcceleration = RotationsPerSecondPerSecond.of(0.0);
         public double leftHoodMotorPosition = 0.0;
         public double leftHoodMotorAngularVelocityRadians = 0.0;
         public Voltage leftFlywheelLeaderMotorVoltage = Volts.of(0);
