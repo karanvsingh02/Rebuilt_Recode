@@ -1,4 +1,4 @@
-package team5427.frc.robot.subsystems.shooter.io;
+package team5427.frc.robot.subsystems.shooter;
 
 import team5427.lib.drivers.LoggedTunableNumber;
 import team5427.lib.tables.LookUpTable;
