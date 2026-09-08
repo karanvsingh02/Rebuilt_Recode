@@ -7,7 +7,7 @@ import static edu.wpi.first.units.Units.RotationsPerSecondPerSecond;
 import static edu.wpi.first.units.Units.Volt;
 import static edu.wpi.first.units.Units.Volts;
 
-import org.checkerframework.checker.units.qual.Angle;
+import edu.wpi.first.units.measure.Angle;
 import org.littletonrobotics.junction.AutoLog;
 
 import com.fasterxml.jackson.databind.ser.std.StdKeySerializers.Default;
