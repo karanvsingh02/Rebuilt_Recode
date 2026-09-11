@@ -3,7 +3,7 @@ package team5427.frc.robot.subsystems.intake.io;
 import static edu.wpi.first.units.Units.MetersPerSecond;
 import static edu.wpi.first.units.Units.MetersPerSecondPerSecond;
 import static edu.wpi.first.units.Units.Rotation;
-
+import static edu.wpi.first.units.Units.Amps;
 import com.ctre.phoenix6.BaseStatusSignal;
 import com.ctre.phoenix6.StatusSignal;
 import edu.wpi.first.math.geometry.Rotation2d;
@@ -157,5 +157,22 @@ public class IntakeIOTalonFX implements IntakeIO {
   public void disablePivotMotor(boolean shouldDisable) {
     isPivotMotorDisabled = shouldDisable;
     if (shouldDisable) pivotMotor.setRawPercentage(0);
+  }
+
+  @Override
+  public void setPivotVoltage(Voltage volts) {
+    pivotMotor.setRawVoltage(volts);
+  }
+
+  @Override
+  public void setPivotCurrentLimit(Current limit) {
+    pivotMotor.talonConfig.CurrentLimits.StatorCurrentLimit = limit.in(Amps);
+    pivotMotor.talonConfig.CurrentLimits.SupplyCurrentLimit = limit.in(Amps) * 0.5;
+    pivotMotor.applyTalonConfig();
+  }
+
+  @Override
+  public void resetPivotMotorPosition(Rotation2d rotation) {
+    pivotMotor.setEncoderPosition(rotation);
   }
 }

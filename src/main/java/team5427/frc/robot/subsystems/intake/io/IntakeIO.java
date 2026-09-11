@@ -60,4 +60,13 @@ public interface IntakeIO {
   public default void disableRollerMotor(boolean shouldDisable) {}
 
   public default void disablePivotMotor(boolean shouldDisable) {}
+
+  public default void setPivotSpeed(Voltage voltage) {}
+
+  public default void setPivotCurrentLimit(Current limit) {}
+
+  public default void resetPivotMotorPosition(Rotation2d rotation) {}
+
+  public default void setPivotVoltage(Voltage volts) {}
+
 }

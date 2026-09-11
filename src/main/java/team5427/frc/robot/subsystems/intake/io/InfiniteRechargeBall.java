@@ -12,6 +12,14 @@ import org.ironmaple.simulation.gamepieces.GamePieceOnFieldSimulation;
 
 public class InfiniteRechargeBall extends GamePieceOnFieldSimulation {
 
+
+
+//Yo do we even need this?
+
+
+
+
+
   public static final GamePieceInfo INFINITE_RECHARGE_BALL_INFO =
       new GamePieceInfo(
           "Ball",
