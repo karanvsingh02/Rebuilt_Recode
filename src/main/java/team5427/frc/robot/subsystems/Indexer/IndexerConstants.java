@@ -2,9 +2,11 @@ package team5427.frc.robot.subsystems.Indexer;
 
 import static edu.wpi.first.units.Units.Inches;
 import static edu.wpi.first.units.Units.Meters;
+import static edu.wpi.first.units.Units.RotationsPerSecond;
 
 import com.ctre.phoenix6.hardware.TalonFX;
 
+import edu.wpi.first.units.measure.AngularVelocity;
 import edu.wpi.first.units.measure.Distance;
 import team5427.lib.drivers.CANDeviceId;
 import team5427.lib.drivers.ComplexGearRatio;
@@ -22,6 +24,8 @@ public class IndexerConstants {
 
     public static final Distance kIndexerFlyWheelRadius = Inches.of(1);
     public static final Distance kHopperFlyWheelRadius = Inches.of(0.5);
+
+    public static final AngularVelocity kIndexerStowVelocity = RotationsPerSecond.of(0);
 
     static{
         kHopperMotorConfiguration.gearRatio = new ComplexGearRatio(18/24);
